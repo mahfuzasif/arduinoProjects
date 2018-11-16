@@ -13,6 +13,6 @@ Materials/Services used for this project are as follows-
 8. Push Buttons etc.
 
 ## Team Members
-* Ajmain Inqiad Alam, CSE. BRAC University
-* [Mahfuzur Rahman](https://mahfuzasif.github.io/), CSE. BRAC University
-* Sharmin Afroz Shormi, CSE. BRAC University
+* Ajmain Inqiad Alam, CSE, BRAC University
+* [Mahfuzur Rahman](https://mahfuzasif.github.io/), CSE, BRAC University
+* Sharmin Afroz Shormi, CSE, BRAC University
