@@ -11,3 +11,8 @@ Materials/Services used for this project are as follows-
 6. GPS Antenna
 7. IR Sensors
 8. Push Buttons etc.
+
+## Team Members
+* Ajmain Inqiad Alam, CSE. BRAC University
+* [Mahfuzur Rahman Asif](https://mahfuzasif.github.io/), CSE. BRAC University
+* Sharmin Afroz Shormi, CSE. BRAC University
