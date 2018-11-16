@@ -14,5 +14,5 @@ Materials/Services used for this project are as follows-
 
 ## Team Members
 * Ajmain Inqiad Alam, CSE. BRAC University
-* [Mahfuzur Rahman Asif](https://mahfuzasif.github.io/), CSE. BRAC University
+* [Mahfuzur Rahman](https://mahfuzasif.github.io/), CSE. BRAC University
 * Sharmin Afroz Shormi, CSE. BRAC University
