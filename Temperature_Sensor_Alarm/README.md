@@ -14,11 +14,11 @@ Materials used for this project are as follows-
 9. Breadboard
 
 ## Demo Video
-You can watch the demo video **[in here](https://www.youtube.com/watch?v=AuGqpuFIS_E)**
+You can watch the demo video **[in here](https://www.youtube.com/watch?v=AuGqpuFIS_E)**.
 
 ## Credits
 Finally, the people behind the camera are:
-* Project workers: Mazidul Hasan Rumman, [Mahfuzur Rahman Asif](https://mahfuzasif.github.io/), Abdullah Umar Nasib.
+* Project workers: MD. Mazidul Hasan Rumman, [Mahfuzur Rahman](https://mahfuzasif.github.io/), Abdullah Umar Nasib.
 * Camera and capture: Kazi Farhan Al Miraz
 * Inspiration: Md. Shamsul Kaonain Sir, Lecturer, CSE, BRAC University
 * Equipment and knowledge: M M Shaifur Rahman vaiya
