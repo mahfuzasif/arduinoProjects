@@ -16,3 +16,4 @@ Materials/Services used for this project are as follows-
 * Ajmain Inqiad Alam, CSE, BRAC University
 * [Mahfuzur Rahman](https://mahfuzasif.github.io/), CSE, BRAC University
 * Sharmin Afroz Shormi, CSE, BRAC University
+* Mahbubul Alam, EEE, BRAC University
