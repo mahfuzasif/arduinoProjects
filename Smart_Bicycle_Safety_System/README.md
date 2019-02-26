@@ -14,7 +14,7 @@ Materials/Services used for this project are as follows-
 
 ## IEEE Citation
 A. I. Alam, M. Rahman, S. Afroz, M. Alam, J. Uddin and M. A. Alam, "IoT Enabled Smart Bicycle Safety System," 2018 Joint 7th International Conference on Informatics, Electronics & Vision (ICIEV) and 2018 2nd International Conference on Imaging, Vision & Pattern Recognition (icIVPR), Kitakyushu, Japan, 2018, pp. 374-378.  
-**doi: 10.1109/ICIEV.2018.8641067**  
+**DOI: 10.1109/ICIEV.2018.8641067**  
 keywords: {Bicycles;Safety;Vibrations;Accidents;Light emitting diodes;Sonar;Liquid crystal displays;Arduino Mega;Smart Bicycle System;Turn Indicator;Collision Detection;Vehicle Tracking;Arduino Uno},  
 URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8641067&isnumber=8640953
 
