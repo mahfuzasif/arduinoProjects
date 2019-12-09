@@ -5,8 +5,16 @@ int8_t answer;
 char* latitude;
 char* longitude;
 char* fields[15];
+const int buttonPin = 7;
+const int vibr_Pin = 3;
+const int buzzer = 10;
+bool value = false;
+char phone_no[]="mobile_number"; //replace "mobile_number" with the emergency number
 /************************************************************************************************/
 void setup() {
+  pinMode(buttonPin, INPUT);
+  pinMode(vibr_Pin, INPUT);
+  pinMode(buzzer, OUTPUT);
   String cont;
   Serial.begin(19200);
   A7board.begin(19200);
@@ -32,8 +40,33 @@ void setup() {
 
 /************************************************************************************************/
 void loop() {
+  noTone(buzzer);
+  if(digitalRead(buttonPin) == HIGH){
+    SendTextMessage();
+  }
+  long measurement = TP_init();
+  delay(50);
+  if(measurement > 100){
+    unsigned long starttime = millis();
+    unsigned long endtime = starttime;
+    while ((endtime - starttime) <= 5000)
+    {
+      tone(buzzer, 1000);
+      if (digitalRead(buttonPin) == HIGH) {
+        value = true;
+        break;
+      }
+      endtime = millis();
+    }
+    noTone(buzzer);
+    if (!value) {
+      SendTextMessage();
+    } else {
+      value = false;
+    }
+  }
   uploadGPS();
-  delay(45000);
+  //delay(10000);
 }
 
 /************************************************************************************************/
@@ -46,10 +79,48 @@ void uploadGPS() {
     if ((latt.toInt() != 0) && (lont.toInt() != 0)) {      
       sendCommand("AT+CIPSTART=\"TCP\",\"api.thingspeak.com\",80", "CONNECT OK", 5000, 1000, ans);
       sendCommand("AT+CIPSEND=44", ">", 2000, 500, ans);
-      A7board.println("GET /update?api_key=*****enter your API key******&field1=" + latt + "&field2=" + lont + "&field3=10");
+      A7board.println("GET /update?api_key=**API KEY HERE**&field1=" + latt + "&field2=" + lont + "&field3=10");
       delay(5000);
       print_result();
     }
+  }
+}
+
+/************************************************************************************************/
+long TP_init(){
+  delay(10);
+  long measurement=pulseIn (vibr_Pin, HIGH);  //wait for the pin to get HIGH and returns measurement
+  return measurement;
+}
+
+/************************************************************************************************/
+void SendTextMessage() {
+  String latt = (char*)latitude;
+  String lont = (char*)longitude;
+  if ((latt.toInt() != 0) && (lont.toInt() != 0)) {
+    float b = latt.toFloat();
+    int c = b / 100;
+    float d = b - (c*100);
+    float lattval = c + (d/60);
+    float b1 = lont.toFloat();
+    int c1 = b1 / 100;
+    float d1 = b1 - (c1*100);
+    float lontval = c1 + (d1/60);
+    String msg = "In danger. Location: http://maps.google.com/maps?f=q&q="+String(lattval)+","+String(lontval)+"&z=16";
+    A7board.println("AT+CMGF=1");
+    delay(2000);
+    print_result();
+    A7board.print("AT+CMGS=\"");
+    A7board.print(phone_no);
+    A7board.write(0x22);
+    A7board.write(0x0D);  // hex equivalent of Carraige return
+    A7board.write(0x0A);  // hex equivalent of newline
+    delay(2000);
+    print_result();
+    A7board.print(msg);
+    delay(500);
+    A7board.println (char(26));//the ASCII code of the ctrl+z is 26
+    print_result();
   }
 }
 
@@ -112,6 +183,8 @@ boolean sendCommand(String cmd, String expAnsw, unsigned int timeout, unsigned i
     Serial.print(longitude);
     Serial.println(fields[5]);
 
+    //convert2Degrees(latitude);
+    //convert2Degrees(longitude);
   }
   Serial.println(replace4VIEW(cont));
   Serial.println("*********** Content End *************");
@@ -221,4 +294,3 @@ void print_result() {
     Serial.write( A7board.read());
   Serial.println();
 }
-
