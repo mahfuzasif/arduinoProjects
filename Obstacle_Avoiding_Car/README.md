@@ -11,7 +11,9 @@ Materials used for this project are as follows-
 6. Directional Wheels
 7. Motor Supports
 8. Robot Chassis (Arcylic, Transparent)
-9. Bolts, Nuts and Jumper Wires
+9. Micro SD Card Adapter
+10. SD Card (for data logging)
+11. Bolts, Nuts and Jumper Wires
 
 ## Team Members
 * [Mahfuzur Rahman](https://mahfuzasif.github.io/), Jr. Developer, Runner Cyberlink Limited
