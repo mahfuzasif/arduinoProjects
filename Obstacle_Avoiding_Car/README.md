@@ -1,5 +1,5 @@
 ## Description
-Obstacle Avoiding Car using 3 sonar sensors.
+An automated obstacle avoiding car project. This detects obstacle on 3 sides: straight front, front-left and front-right sides by the help of 3 sonar sensors. If any obstacle is detected, it avoids that side and goes to any open side.
 
 ## Components
 Materials used for this project are as follows-
