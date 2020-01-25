@@ -21,9 +21,9 @@
 #define MotorLeft_PWM 9
 #define MotorRight_PWM 10
 
-//#define MISO 12
-//#define MOSI 11
-//#define SCK 13
+// MISO 12
+// MOSI 11
+// SCK 13
 #define chipSelect 7
 
 
